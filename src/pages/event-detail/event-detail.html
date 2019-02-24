@@ -24,7 +24,11 @@
     <h1 class="event-header">開催場所:</h1>
     <p>{{event.address}} {{event.place}}</p>
     <h1 class="event-header">イベント日時:</h1>
-    <p>{{event.started_at}}〜{{event.ended_at}}</p>
+    <p>
+      {{event.started_at | date: 'longDate'}}{{event.started_at | date: 'shortTime'}}
+      〜
+      {{event.ended_at | date: 'longDate'}}{{event.ended_at | date: 'shortTime'}}
+    </p>
     <h1 class="event-header">概要:</h1>
     <div [innerHTML]="event.description"></div>
   </ng-container>

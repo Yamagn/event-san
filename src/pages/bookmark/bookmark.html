@@ -17,7 +17,10 @@
         <h2>{{event.title}}</h2>
         <h3>{{event.catch}}</h3>
         <h4>開催場所:</h4>
-        <p>{{event.started_at}}〜{{event.ended_at}}</p>
+        <p>{{event.started_at | date: 'longDate'}}{{event.started_at | date: 'shortTime'}}
+          〜
+          {{event.ended_at | date: 'longDate'}}{{event.ended_at | date: 'shortTime'}}
+        </p>
       </button>
       <ion-item-options slide="right">
         <button ion-button color="danger" icon-start (click)="doDelete(event, itemSliding)">
