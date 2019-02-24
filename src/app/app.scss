@@ -14,3 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+[padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child,
+[padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child {
+  margin-top: 0;
+}
+
+ion-label {
+  white-space: normal;
+}
