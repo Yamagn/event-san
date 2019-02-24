@@ -16,4 +16,16 @@
       <ion-searchbar name="keywords" [(ngModel)]="keywords" placeholder="キーワード検索"></ion-searchbar>
     </form>
   </div>
+  <ion-list class="event-list">
+    <ng-container *ngFor="let event of events">
+      <button ion-item>
+        <h2>{{event.title}}</h2>
+        <h3>{{event.catch}}</h3>
+        <h4>開催場所:</h4>
+        <p>{{event.address}} {{event.place}}</p>
+        <h4>イベント日時:</h4>
+        <p>{{event.started_at}}〜{{event.ended_at}}</p>
+      </button>
+    </ng-container>
+  </ion-list>
 </ion-content>
