@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EventProvider } from '../providers/event/event';
+import { BookmarkProvider } from '../providers/bookmark/bookmark';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EventProvider } from '../providers/event/event';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    EventProvider
+    EventProvider,
+    BookmarkProvider
   ]
 })
 export class AppModule {}
