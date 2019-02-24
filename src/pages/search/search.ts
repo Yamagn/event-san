@@ -47,6 +47,7 @@ export class SearchPage {
 
   openEvent(event) {
     this.navCtrl.push('EventDetailPage', {
+      eventId: event.event_id,
       event: event
     });
   }
