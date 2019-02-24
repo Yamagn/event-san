@@ -11,5 +11,21 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-sliding #itemSliding *ngFor="let event of events">
+      <button ion-item (click)="openEvent(event)">
+        <h2>{{event.title}}</h2>
+        <h3>{{event.catch}}</h3>
+        <h4>開催場所:</h4>
+        <p>{{event.started_at}}〜{{event.ended_at}}</p>
+      </button>
+      <ion-item-options slide="right">
+        <button ion-button color="danger" icon-start (click)="doDelete(event, itemSliding)">
+          <ion-icon name="trash"></ion-icon>
+          削除
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>

@@ -27,9 +27,9 @@ export class BookmarkProvider {
     })
   }
 
-  delete(events: any) {
+  delete(event: any) {
     return this.get().then(events => {
-      delete  events[event.event_id];
+      delete events[event.event_id];
       return this.storage.set("bookmark.events", events);
     })
   }
