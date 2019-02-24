@@ -6,9 +6,14 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title></ion-title>検索</ion-navbar>
+    <ion-title>検索</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div class="searchbar" ion-fixed>
+    <form action="" (keydown.enter)="getEvents($event)">
+      <ion-searchbar name="keywords" [(ngModel)]="keywords" placeholder="キーワード検索"></ion-searchbar>
+    </form>
+  </div>
 </ion-content>
