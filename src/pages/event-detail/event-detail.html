@@ -6,10 +6,21 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>EventDetail</ion-title>
+    <ion-title>イベント詳細</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ng-container *ngIf="event">
+    <h1><a [href]="event.event_url" target="_blank">{{event.title}}</a></h1>
+    <p>{{event.catch}}</p>
+    <h1 class="event-header">開催場所:</h1>
+    <p>{{event.address}} {{event.place}}</p>
+    <h1 class="event-header">イベント日時:</h1>
+    <p>{{event.started_at}}〜{{event.ended_at}}</p>
+    <h1 class="event-header">概要:</h1>
+    <div [innerHTML]="event.description"></div>
+  </ng-container>
 
 </ion-content>

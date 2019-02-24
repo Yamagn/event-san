@@ -45,4 +45,10 @@ export class SearchPage {
     })
   }
 
+  openEvent(event) {
+    this.navCtrl.push('EventDetailPage', {
+      event: event
+    });
+  }
+
 }

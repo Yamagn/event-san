@@ -18,7 +18,7 @@
   </div>
   <ion-list class="event-list">
     <ng-container *ngFor="let event of events">
-      <button ion-item>
+      <button ion-item (click)="openEvent(event)">
         <h2>{{event.title}}</h2>
         <h3>{{event.catch}}</h3>
         <h4>開催場所:</h4>
